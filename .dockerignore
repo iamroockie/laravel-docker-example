@@ -1,0 +1,10 @@
+.git
+.gitignore
+
+.idea
+.vscode
+
+src/vendor
+src/node_modules
+
+src/storage/logs/*.log

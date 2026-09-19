@@ -1,0 +1,17 @@
+app.test, localhost {
+    root * /app/public
+
+    encode zstd gzip
+
+    php_fastcgi php:9000
+
+    file_server
+
+    tls internal
+}
+
+https://localhost:5173 {
+    tls internal
+
+    reverse_proxy bun:5173
+}
